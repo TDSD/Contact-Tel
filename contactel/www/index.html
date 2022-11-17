@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <link rel="stylesheet" href="lib/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="css/index.css">
+        <script src="js/index.js"></script>
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+        <script src="cordova.js"></script>
+        <title>Contact'Tel App</title>
+    </head>
+    <body>
+        <div id="listPage" data-role="page">
+            <div data-role="header">
+                <h1>Contact'Tel</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <a href="#addPage" data-role="button" data-icon="plus" data-iconpos="right">Ajouter un contact</a>
+                <ul id="contactList" data-role="listview" data-split-icon="gear" data-split-theme="a" data-inset="true" data-filter="true" data-filter-placeholder="Rechercher un contact">
+                    <li>
+                        <a href="#">
+                            <img src="./img/avatar-1.png" alt="avatar-contact">
+                            <h2>BFF <3 </h2>
+                            <p>+221 77 986 21 54</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/avatar-2.png" alt="avatar-contact">
+                            <h2>Fréro</h2>
+                            <p>+221 70 895 66 21</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/avatar-3.png" alt="avatar-contact">
+                            <h2>Sis</h2>
+                            <p>+221 78 998 87 58</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h5>M1IABD &copy; Octobre 2022</h5>
+            </div>
+        </div>
+        <div id="addPage" data-role="page">
+            <div data-role="header">
+                <a href="#listPage" data-rel="back" data-icon="home" data-iconpos="notext" ></a>
+                <h1>Contact'Tel</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <h1>Ajout d'un nouveau contact</h1>
+            </div>
+            <form>
+                <input type="text" id="prenom" placeholder="Prénom">
+                <input type="text" id="nom" placeholder="Nom">
+                <input type="tel" id="telephone" placeholder="Téléphone">
+                <input type="email" id="email" placeholder="Email">
+                <input type="text" id="adresse" placeholder="Adresse">
+                <input type="button" value="Ajouter" data-icon="plus" data-iconpos="right" onclick="addContact()">
+            </form>
+            <div data-role="footer" data-position="fixed">
+                <h5>M1IABD &copy; Octobre 2022</h5>
+            </div>
+        </div>
+        <div id="detail" data-role="page">
+            <div data-role="header">
+                <a href="#listPage" data-rel="back" data-icon="home" data-iconpos="notext" ></a>
+                <h1>Contact'Tel</h1>
+            </div>
+            <div data-role="main" class="ui-content">
+                <h1>Détails</h1>
+                <div id="pdetail"></div>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h5>M1IABD &copy; Octobre 2022</h5>
+            </div>
+        </div>
+    </body>
+</html>
